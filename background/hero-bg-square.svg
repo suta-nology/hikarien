@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="dotsSq" x="0" y="0" width="72" height="72" patternUnits="userSpaceOnUse">
+      <circle cx="36" cy="36" r="2.2" fill="#A8B89D"></circle>
+      <circle cx="0" cy="0" r="1.4" fill="#D4A574" opacity="0.6"></circle>
+      <circle cx="72" cy="72" r="1.4" fill="#D4A574" opacity="0.6"></circle>
+    </pattern>
+    <linearGradient id="sageBandSq" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A8B89D" stop-opacity="0"></stop>
+      <stop offset="100%" stop-color="#A8B89D" stop-opacity="0.30"></stop>
+    </linearGradient>
+    <linearGradient id="paperBgSq" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF6EF"></stop>
+      <stop offset="100%" stop-color="#F5EDE0"></stop>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#paperBgSq)"></rect>
+  <rect width="1200" height="1200" fill="url(#dotsSq)" opacity="0.32"></rect>
+  <text x="1240" y="1380" font-family="&#39;Shippori Mincho&#39;, &#39;Noto Serif JP&#39;, serif" font-size="1000" font-weight="400" fill="#EBDFCB" text-anchor="end">光</text>
+  <rect x="0" y="820" width="1200" height="380" fill="url(#sageBandSq)"></rect>
+</svg>

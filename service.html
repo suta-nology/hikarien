@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ひかり苑のサービス紹介。有料老人ホーム・デイサービス・訪問介護など多様な介護サービス。" />
+  <meta name="author" content="Sutanology" />
+  <meta property="og:title" content="サービス紹介 | ひかり苑" />
+  <meta property="og:type"  content="website" />
+  <title>サービス紹介 | ひかり苑</title>
+  <link rel="icon"             type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="icon"             type="image/png"     href="favicon/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                      href="favicon/favicon-180.png" sizes="180x180" />
+  <link rel="icon"             type="image/png"     href="favicon/favicon-192.png" sizes="192x192" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="util-bar">
+    <div class="util-inner">
+      <div class="util-info">
+        <span data-i18n="utilTel">📞 0120-000-000</span>
+        <span class="util-sep"></span>
+        <span data-i18n="utilHours">受付時間 9:00〜17:00（月〜土）</span>
+      </div>
+      <button class="lang-toggle-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    </div>
+  </div>
+  <div class="header-inner container">
+    <a href="index.html" class="site-logo" aria-label="ひかり苑 HIKARI CARE">
+      <img src="logo/logo-full.svg"  alt="ひかり苑 HIKARI CARE" class="logo-img-full" />
+      <img src="logo/logo-mark.svg"  alt="ひかり苑"              class="logo-img-mark" />
+    </a>
+    <nav class="desktop-nav">
+      <ul class="nav-list">
+        <li><a href="index.html"           class="nav-link" data-i18n="navHome">ホーム</a></li>
+        <li><a href="service.html"         class="nav-link" data-i18n="navService">サービス</a></li>
+        <li><a href="facility.html"        class="nav-link" data-i18n="navFacility">施設を探す</a></li>
+        <li><a href="contact.html#recruit" class="nav-link" data-i18n="navRecruit">採用情報</a></li>
+        <li><a href="contact.html"         class="nav-link" data-i18n="navContact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="tel:0120000000" class="header-tel">
+        <div class="tel-icon">📞</div>
+        <div class="tel-info">
+          <span class="tel-label" data-i18n="telLabel">お電話でのご相談</span>
+          <span class="tel-num">0120-000-000</span>
+        </div>
+      </a>
+      <a href="contact.html" class="btn-header-contact" data-i18n="btnContact">お問い合わせ</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html"           data-i18n="navHome">ホーム</a></li>
+        <li><a href="service.html"         data-i18n="navService">サービス</a></li>
+        <li><a href="facility.html"        data-i18n="navFacility">施設を探す</a></li>
+        <li><a href="contact.html#recruit" data-i18n="navRecruit">採用情報</a></li>
+        <li><a href="contact.html"         data-i18n="navContact">お問い合わせ</a></li>
+      </ul>
+      <div class="mobile-contact-block">
+        <span class="mobile-tel-label" data-i18n="telLabel">お電話でのご相談</span>
+        <a href="tel:0120000000" class="mobile-tel-link">📞 0120-000-000</a>
+        <a href="contact.html" class="mobile-contact-btn" data-i18n="btnContact">お問い合わせフォームへ →</a>
+        <button class="lang-toggle-btn" onclick="toggleLang()" style="margin-top:8px;width:100%;border-radius:10px;height:42px;font-size:13px;">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="page-hero-en" data-i18n="svcPageEn">SERVICE</span>
+  <h1 class="page-hero-title" data-i18n="svcPageTitle">サービス紹介</h1>
+  <div class="breadcrumb">
+    <a href="index.html" data-i18n="navHome">ホーム</a>
+    <span class="breadcrumb-sep">›</span>
+    <span data-i18n="svcBread">サービス紹介</span>
+  </div>
+</div>
+
+<main>
+  <!-- 有料老人ホーム -->
+  <section class="section section-alt" id="residential">
+    <div class="container">
+      <div class="service-row fade-up">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop" alt="有料老人ホーム" loading="lazy" />
+        </div>
+        <div>
+          <span class="service-tag" data-i18n="svc1DetailTag">RESIDENTIAL CARE</span>
+          <h2 class="service-title" data-i18n="svc1DetailTitle">有料老人ホーム</h2>
+          <p class="service-desc" data-i18n="svc1DetailDesc">24時間365日、専任スタッフが常駐する安心の住まいです。食事・入浴・排泄などの日常生活介助はもちろん、個別に作成したケアプランに基づいた丁寧なサポートを行います。医療機関との連携体制も充実しており、急な体調変化にも迅速に対応できます。</p>
+          <ul class="service-points">
+            <li class="service-point" data-i18n="svc1dp1">24時間専任スタッフ常駐・夜間対応体制完備</li>
+            <li class="service-point" data-i18n="svc1dp2">栄養士監修の日替わり食事（選択メニュー・特別食対応）</li>
+            <li class="service-point" data-i18n="svc1dp3">個別ケアプランに基づく丁寧な生活支援</li>
+            <li class="service-point" data-i18n="svc1dp4">協力医療機関との連携による安心の医療体制</li>
+            <li class="service-point" data-i18n="svc1dp5">機能訓練・リハビリプログラムの充実</li>
+            <li class="service-point" data-i18n="svc1dp6">季節行事・音楽療法・外出レクリエーション</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" data-i18n="svc1dBtn">見学・資料請求のご相談 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- デイサービス -->
+  <section class="section" id="day">
+    <div class="container">
+      <div class="service-row reverse fade-up">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&auto=format&fit=crop" alt="デイサービス" loading="lazy" />
+        </div>
+        <div>
+          <span class="service-tag" data-i18n="svc2DetailTag">DAY SERVICE</span>
+          <h2 class="service-title" data-i18n="svc2DetailTitle">デイサービス（通所介護）</h2>
+          <p class="service-desc" data-i18n="svc2DetailDesc">自宅から通いながら、日中の活動・機能訓練・入浴などのサービスを受けることができます。ご家族の介護負担を軽減しながら、在宅生活を長く続けていただくためのサービスです。仲間との交流を通じて、生活に活気とリズムをもたらします。</p>
+          <ul class="service-points">
+            <li class="service-point" data-i18n="svc2dp1">自宅への送迎サービスあり（エリア指定）</li>
+            <li class="service-point" data-i18n="svc2dp2">理学療法士・作業療法士による機能訓練</li>
+            <li class="service-point" data-i18n="svc2dp3">入浴・食事・排泄介助をワンストップ提供</li>
+            <li class="service-point" data-i18n="svc2dp4">脳トレ・手芸・音楽など多彩なレクリエーション</li>
+            <li class="service-point" data-i18n="svc2dp5">ご家族への情報提供・相談対応</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" data-i18n="svc2dBtn">体験利用のご相談 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 訪問介護 -->
+  <section class="section section-alt" id="visit">
+    <div class="container">
+      <div class="service-row fade-up">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop" alt="訪問介護" loading="lazy" />
+        </div>
+        <div>
+          <span class="service-tag" data-i18n="svc3DetailTag">HOME VISIT CARE</span>
+          <h2 class="service-title" data-i18n="svc3DetailTitle">訪問介護（ホームヘルパー）</h2>
+          <p class="service-desc" data-i18n="svc3DetailDesc">住み慣れたご自宅で安心して生活を続けていただくために、ヘルパーがご自宅を訪問しサポートします。身体介護から生活援助まで、必要なサービスを組み合わせてご利用いただけます。</p>
+          <ul class="service-points">
+            <li class="service-point" data-i18n="svc3dp1">食事・入浴・排泄などの身体介護</li>
+            <li class="service-point" data-i18n="svc3dp2">掃除・洗濯・買い物などの生活援助</li>
+            <li class="service-point" data-i18n="svc3dp3">ケアマネジャーと連携した個別プラン</li>
+            <li class="service-point" data-i18n="svc3dp4">定期訪問から緊急対応まで柔軟に対応</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" data-i18n="svc3dBtn">ご利用のご相談 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="section-head center">
+        <span class="section-en" data-i18n="svcCtaEn">CONTACT</span>
+        <h2 class="section-title" data-i18n="svcCtaTitle">サービスについてまずはお気軽にご相談ください</h2>
+        <p class="section-desc" data-i18n="svcCtaDesc">見学・体験利用・資料請求など、どんなご相談でもお受けしています。専門スタッフが丁寧にご案内します。</p>
+      </div>
+      <div class="cta-btns">
+        <a href="contact.html"  class="btn btn-white"   data-i18n="svcCtaBtn1">お問い合わせ</a>
+        <a href="facility.html" class="btn btn-outline"  data-i18n="svcCtaBtn2" style="color:rgba(255,255,255,0.85);border-color:rgba(255,255,255,0.4);">施設を探す</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="site-logo footer-logo">
+          <img src="logo/logo-full-white.svg" alt="ひかり苑 HIKARI CARE" style="height:38px;width:auto;display:block;" />
+        </div>
+        <p class="footer-desc" data-i18n="footDesc">心のこもった介護で、ご入居者様・ご利用者様の毎日に笑顔と安心をお届けします。</p>
+      </div>
+      <div>
+        <p class="footer-col-title" data-i18n="footMenuTitle">メニュー</p>
+        <ul class="footer-links">
+          <li><a href="index.html"           data-i18n="footMenu1">ホーム</a></li>
+          <li><a href="service.html"         data-i18n="footMenu2">サービス紹介</a></li>
+          <li><a href="facility.html"        data-i18n="footMenu3">施設を探す</a></li>
+          <li><a href="contact.html#recruit" data-i18n="footMenu4">採用情報</a></li>
+          <li><a href="contact.html"         data-i18n="footMenu5">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title" data-i18n="footCtaTitle">ご相談・お問い合わせ</p>
+        <a href="tel:0120000000" class="footer-tel-big">0120-000-000</a>
+        <p class="footer-hours" data-i18n-html="footHours">受付時間 9:00〜17:00（月〜土）<br>日祝・年末年始を除く</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy" data-i18n="footCopy">© 2026 HIKARI CARE — Built by Sutanology</p>
+      <div class="footer-policy">
+        <a href="#" data-i18n="footPrivacy">プライバシーポリシー</a>
+        <a href="#" data-i18n="footTerms">利用規約</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/lang.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

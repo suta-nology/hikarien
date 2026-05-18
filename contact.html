@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ひかり苑へのお問い合わせ。見学・資料請求・採用など、どんなご相談でもお気軽にどうぞ。" />
+  <meta name="author" content="Sutanology" />
+  <meta property="og:title" content="お問い合わせ | ひかり苑" />
+  <meta property="og:type"  content="website" />
+  <title>お問い合わせ | ひかり苑</title>
+  <link rel="icon"             type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="icon"             type="image/png"     href="favicon/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                      href="favicon/favicon-180.png" sizes="180x180" />
+  <link rel="icon"             type="image/png"     href="favicon/favicon-192.png" sizes="192x192" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="util-bar">
+    <div class="util-inner">
+      <div class="util-info">
+        <span data-i18n="utilTel">📞 0120-000-000</span>
+        <span class="util-sep"></span>
+        <span data-i18n="utilHours">受付時間 9:00〜17:00（月〜土）</span>
+      </div>
+      <button class="lang-toggle-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    </div>
+  </div>
+  <div class="header-inner container">
+    <a href="index.html" class="site-logo" aria-label="ひかり苑 HIKARI CARE">
+      <img src="logo/logo-full.svg"  alt="ひかり苑 HIKARI CARE" class="logo-img-full" />
+      <img src="logo/logo-mark.svg"  alt="ひかり苑"              class="logo-img-mark" />
+    </a>
+    <nav class="desktop-nav">
+      <ul class="nav-list">
+        <li><a href="index.html"           class="nav-link" data-i18n="navHome">ホーム</a></li>
+        <li><a href="service.html"         class="nav-link" data-i18n="navService">サービス</a></li>
+        <li><a href="facility.html"        class="nav-link" data-i18n="navFacility">施設を探す</a></li>
+        <li><a href="contact.html#recruit" class="nav-link" data-i18n="navRecruit">採用情報</a></li>
+        <li><a href="contact.html"         class="nav-link" data-i18n="navContact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="tel:0120000000" class="header-tel">
+        <div class="tel-icon">📞</div>
+        <div class="tel-info">
+          <span class="tel-label" data-i18n="telLabel">お電話でのご相談</span>
+          <span class="tel-num">0120-000-000</span>
+        </div>
+      </a>
+      <a href="contact.html" class="btn-header-contact" data-i18n="btnContact">お問い合わせ</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html"           data-i18n="navHome">ホーム</a></li>
+        <li><a href="service.html"         data-i18n="navService">サービス</a></li>
+        <li><a href="facility.html"        data-i18n="navFacility">施設を探す</a></li>
+        <li><a href="contact.html#recruit" data-i18n="navRecruit">採用情報</a></li>
+        <li><a href="contact.html"         data-i18n="navContact">お問い合わせ</a></li>
+      </ul>
+      <div class="mobile-contact-block">
+        <span class="mobile-tel-label" data-i18n="telLabel">お電話でのご相談</span>
+        <a href="tel:0120000000" class="mobile-tel-link">📞 0120-000-000</a>
+        <a href="contact.html" class="mobile-contact-btn" data-i18n="btnContact">お問い合わせフォームへ →</a>
+        <button class="lang-toggle-btn" onclick="toggleLang()" style="margin-top:8px;width:100%;border-radius:10px;height:42px;font-size:13px;">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="page-hero-en" data-i18n="conPageEn">CONTACT</span>
+  <h1 class="page-hero-title" data-i18n="conPageTitle">お問い合わせ</h1>
+  <div class="breadcrumb">
+    <a href="index.html" data-i18n="navHome">ホーム</a>
+    <span class="breadcrumb-sep">›</span>
+    <span data-i18n="conBread">お問い合わせ</span>
+  </div>
+</div>
+
+<main>
+  <!-- ── CONTACT FORM ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-en" data-i18n="conEn">GET IN TOUCH</span>
+        <h2 class="section-title" data-i18n="conTitle">ご相談・お問い合わせ</h2>
+        <p class="section-desc" data-i18n="conDesc">見学・体験利用・資料請求など、どんなご相談でもお気軽にどうぞ。担当者より3営業日以内にご連絡いたします。</p>
+      </div>
+
+      <div class="contact-wrap">
+        <!-- Info -->
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📞</div>
+            <div>
+              <span class="contact-info-label" data-i18n="conTelLabel">お電話</span>
+              <span class="contact-info-value">0120-000-000</span>
+              <p class="contact-hours" data-i18n-html="footHours">受付時間 9:00〜17:00（月〜土）<br>日祝・年末年始を除く</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">✉️</div>
+            <div>
+              <span class="contact-info-label" data-i18n="conEmailLabel">メール</span>
+              <span class="contact-info-value">info@hikari-care.example.jp</span>
+              <p class="contact-hours">24時間受付</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div>
+              <span class="contact-info-label" data-i18n="conAddrLabel">本社所在地</span>
+              <span class="contact-info-value">〒000-0000<br>東京都〇〇区〇〇1-1-1</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🕐</div>
+            <div>
+              <span class="contact-info-label" data-i18n="conVisitLabel">見学対応時間</span>
+              <span class="contact-info-value" data-i18n="conVisitHours">10:00〜16:00</span>
+              <p class="contact-hours" data-i18n="conVisitNote">事前予約が必要です</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-card">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">
+                  <span data-i18n="fName">お名前</span>
+                  <span class="required-badge" data-i18n="fRequired">必須</span>
+                </label>
+                <input type="text" name="name" class="form-control" data-i18n-ph="fNamePh" placeholder="山田 太郎" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  <span data-i18n="fNameKana">お名前（ふりがな）</span>
+                  <span class="required-badge" data-i18n="fRequired">必須</span>
+                </label>
+                <input type="text" name="furigana" class="form-control" data-i18n-ph="fNameKanaPh" placeholder="やまだ たろう" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">
+                  <span data-i18n="fEmail">メールアドレス</span>
+                  <span class="required-badge" data-i18n="fRequired">必須</span>
+                </label>
+                <input type="email" name="email" class="form-control" data-i18n-ph="fEmailPh" placeholder="example@email.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  <span data-i18n="fTel">電話番号</span>
+                </label>
+                <input type="tel" name="tel" class="form-control" data-i18n-ph="fTelPh" placeholder="000-0000-0000" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">
+                <span data-i18n="fType">お問い合わせ種別</span>
+                <span class="required-badge" data-i18n="fRequired">必須</span>
+              </label>
+              <select name="type" class="form-control" required>
+                <option value=""  data-i18n="fTypeSelect">選択してください</option>
+                <option data-i18n="fType1">施設見学のご予約</option>
+                <option data-i18n="fType2">資料請求</option>
+                <option data-i18n="fType3">サービスに関するご相談</option>
+                <option data-i18n="fType4">費用についてのご相談</option>
+                <option data-i18n="fType5">体験入居・体験利用のご予約</option>
+                <option data-i18n="fType6">採用に関するお問い合わせ</option>
+                <option data-i18n="fType7">その他</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">
+                <span data-i18n="fMessage">お問い合わせ内容</span>
+                <span class="required-badge" data-i18n="fRequired">必須</span>
+              </label>
+              <textarea name="message" class="form-control" data-i18n-ph="fMsgPh" placeholder="ご質問やご要望をご記入ください。" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label"><span data-i18n="fPref">ご希望の連絡方法</span></label>
+              <select name="contact_pref" class="form-control">
+                <option data-i18n="fPref1">メールで連絡を希望する</option>
+                <option data-i18n="fPref2">電話で連絡を希望する</option>
+                <option data-i18n="fPref3">どちらでも可</option>
+              </select>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn" data-i18n="fSubmit">送信する</button>
+          </form>
+          <div id="thankYou">
+            <p class="ty-icon">✅</p>
+            <h3 data-i18n="fThanksTitle">お問い合わせありがとうございます</h3>
+            <p data-i18n="fThanksDesc">内容を確認の上、担当者より3営業日以内にご連絡いたします。しばらくお待ちくださいませ。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RECRUITMENT ── -->
+  <section class="section" id="recruit">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-en" data-i18n="recEn">RECRUITMENT</span>
+        <h2 class="section-title" data-i18n="recTitle">採用情報</h2>
+        <p class="section-desc" data-i18n="recDesc">ひかり苑では、利用者様の笑顔のために共に働くスタッフを積極的に募集しています。</p>
+      </div>
+
+      <div class="service-row fade-up">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop" alt="ひかり苑スタッフ" loading="lazy" />
+        </div>
+        <div>
+          <span class="service-tag" data-i18n="recDetailTag">JOIN OUR TEAM</span>
+          <h3 class="service-title" data-i18n="recDetailTitle">介護スタッフ・看護スタッフ 募集中</h3>
+          <p class="service-desc" data-i18n="recDetailDesc">「誰かの役に立ちたい」「人と関わる仕事がしたい」そんな想いを持つ方を歓迎します。未経験からスタートした先輩スタッフも多数活躍中。充実した研修制度とキャリアサポートで、あなたの成長を全力でバックアップします。</p>
+          <ul class="service-points">
+            <li class="service-point" data-i18n="recp1">未経験・無資格歓迎（介護福祉士取得支援あり）</li>
+            <li class="service-point" data-i18n="recp2">正社員・パート・派遣など多様な雇用形態</li>
+            <li class="service-point" data-i18n="recp3">充実した研修制度・OJTサポート</li>
+            <li class="service-point" data-i18n="recp4">産育休・時短勤務など制度が整った職場環境</li>
+            <li class="service-point" data-i18n="recp5">スタッフの声を大切にする風通しの良い職場</li>
+          </ul>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="mailto:recruit@hikari-care.example.jp" class="btn btn-gold" data-i18n="recApplyBtn">採用に応募する →</a>
+            <a href="#" class="btn btn-outline" data-i18n="recConsultBtn">採用について相談する</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jobs table -->
+      <div style="margin-top:56px;">
+        <h3 style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:20px;padding-left:14px;border-left:3px solid var(--primary);" data-i18n="recTableTitle">募集職種・待遇</h3>
+        <div style="background:var(--surface);border:1px solid var(--border-lt);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:480px;">
+            <thead>
+              <tr style="background:var(--green-50);">
+                <th style="padding:13px 20px;text-align:left;color:var(--primary);font-weight:700;width:30%;" data-i18n="recTh1">職種</th>
+                <th style="padding:13px 20px;text-align:left;color:var(--primary);font-weight:700;" data-i18n="recTh2">雇用形態</th>
+                <th style="padding:13px 20px;text-align:left;color:var(--primary);font-weight:700;" data-i18n="recTh3">給与</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-top:1px solid var(--border-lt);">
+                <td style="padding:15px 20px;color:var(--text);font-weight:600;">介護スタッフ</td>
+                <td style="padding:15px 20px;color:var(--text-mid);">正社員 / パート</td>
+                <td style="padding:15px 20px;color:var(--text-mid);">月給 220,000円〜 ／ 時給 1,100円〜</td>
+              </tr>
+              <tr style="border-top:1px solid var(--border-lt);background:var(--bg);">
+                <td style="padding:15px 20px;color:var(--text);font-weight:600;">看護師</td>
+                <td style="padding:15px 20px;color:var(--text-mid);">正社員 / パート</td>
+                <td style="padding:15px 20px;color:var(--text-mid);">月給 300,000円〜 ／ 時給 1,800円〜</td>
+              </tr>
+              <tr style="border-top:1px solid var(--border-lt);">
+                <td style="padding:15px 20px;color:var(--text);font-weight:600;">生活相談員</td>
+                <td style="padding:15px 20px;color:var(--text-mid);">正社員</td>
+                <td style="padding:15px 20px;color:var(--text-mid);">月給 250,000円〜</td>
+              </tr>
+              <tr style="border-top:1px solid var(--border-lt);background:var(--bg);">
+                <td style="padding:15px 20px;color:var(--text);font-weight:600;">調理スタッフ</td>
+                <td style="padding:15px 20px;color:var(--text-mid);">正社員 / パート</td>
+                <td style="padding:15px 20px;color:var(--text-mid);">月給 200,000円〜 ／ 時給 1,050円〜</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:12px;color:var(--text-muted);margin-top:10px;" data-i18n="recNote">※ 給与は経験・資格・勤務地により異なります。詳しくはお問い合わせください。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="site-logo footer-logo">
+          <img src="logo/logo-full-white.svg" alt="ひかり苑 HIKARI CARE" style="height:38px;width:auto;display:block;" />
+        </div>
+        <p class="footer-desc" data-i18n="footDesc">心のこもった介護で、ご入居者様・ご利用者様の毎日に笑顔と安心をお届けします。</p>
+      </div>
+      <div>
+        <p class="footer-col-title" data-i18n="footMenuTitle">メニュー</p>
+        <ul class="footer-links">
+          <li><a href="index.html"           data-i18n="footMenu1">ホーム</a></li>
+          <li><a href="service.html"         data-i18n="footMenu2">サービス紹介</a></li>
+          <li><a href="facility.html"        data-i18n="footMenu3">施設を探す</a></li>
+          <li><a href="contact.html#recruit" data-i18n="footMenu4">採用情報</a></li>
+          <li><a href="contact.html"         data-i18n="footMenu5">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title" data-i18n="footCtaTitle">ご相談・お問い合わせ</p>
+        <a href="tel:0120000000" class="footer-tel-big">0120-000-000</a>
+        <p class="footer-hours" data-i18n-html="footHours">受付時間 9:00〜17:00（月〜土）<br>日祝・年末年始を除く</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy" data-i18n="footCopy">© 2026 HIKARI CARE — Built by Sutanology</p>
+      <div class="footer-policy">
+        <a href="#" data-i18n="footPrivacy">プライバシーポリシー</a>
+        <a href="#" data-i18n="footTerms">利用規約</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/lang.js"></script>
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="dots" x="0" y="0" width="72" height="72" patternUnits="userSpaceOnUse">
+      <circle cx="36" cy="36" r="2.2" fill="#A8B89D"></circle>
+      <circle cx="0" cy="0" r="1.4" fill="#D4A574" opacity="0.6"></circle>
+      <circle cx="72" cy="72" r="1.4" fill="#D4A574" opacity="0.6"></circle>
+    </pattern>
+    <linearGradient id="sageBand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A8B89D" stop-opacity="0"></stop>
+      <stop offset="100%" stop-color="#A8B89D" stop-opacity="0.30"></stop>
+    </linearGradient>
+    <linearGradient id="paperBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF6EF"></stop>
+      <stop offset="100%" stop-color="#F5EDE0"></stop>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#paperBg)"></rect>
+  
+  <rect width="1920" height="1080" fill="url(#dots)" opacity="0.32"></rect>
+  
+  <text x="1920" y="1240" font-family="&#39;Shippori Mincho&#39;, &#39;Noto Serif JP&#39;, serif" font-size="900" font-weight="400" fill="#EBDFCB" text-anchor="end">光</text>
+  
+  <rect x="0" y="735" width="1920" height="345" fill="url(#sageBand)"></rect>
+</svg>

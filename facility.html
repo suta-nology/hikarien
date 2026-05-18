@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ひかり苑の施設一覧。エリア・サービス種別から全国の施設を検索できます。" />
+  <meta name="author" content="Sutanology" />
+  <meta property="og:title" content="施設を探す | ひかり苑" />
+  <meta property="og:type"  content="website" />
+  <title>施設を探す | ひかり苑</title>
+  <link rel="icon"             type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="icon"             type="image/png"     href="favicon/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                      href="favicon/favicon-180.png" sizes="180x180" />
+  <link rel="icon"             type="image/png"     href="favicon/favicon-192.png" sizes="192x192" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="util-bar">
+    <div class="util-inner">
+      <div class="util-info">
+        <span data-i18n="utilTel">📞 0120-000-000</span>
+        <span class="util-sep"></span>
+        <span data-i18n="utilHours">受付時間 9:00〜17:00（月〜土）</span>
+      </div>
+      <button class="lang-toggle-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    </div>
+  </div>
+  <div class="header-inner container">
+    <a href="index.html" class="site-logo" aria-label="ひかり苑 HIKARI CARE">
+      <img src="logo/logo-full.svg"  alt="ひかり苑 HIKARI CARE" class="logo-img-full" />
+      <img src="logo/logo-mark.svg"  alt="ひかり苑"              class="logo-img-mark" />
+    </a>
+    <nav class="desktop-nav">
+      <ul class="nav-list">
+        <li><a href="index.html"           class="nav-link" data-i18n="navHome">ホーム</a></li>
+        <li><a href="service.html"         class="nav-link" data-i18n="navService">サービス</a></li>
+        <li><a href="facility.html"        class="nav-link" data-i18n="navFacility">施設を探す</a></li>
+        <li><a href="contact.html#recruit" class="nav-link" data-i18n="navRecruit">採用情報</a></li>
+        <li><a href="contact.html"         class="nav-link" data-i18n="navContact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="tel:0120000000" class="header-tel">
+        <div class="tel-icon">📞</div>
+        <div class="tel-info">
+          <span class="tel-label" data-i18n="telLabel">お電話でのご相談</span>
+          <span class="tel-num">0120-000-000</span>
+        </div>
+      </a>
+      <a href="contact.html" class="btn-header-contact" data-i18n="btnContact">お問い合わせ</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html"           data-i18n="navHome">ホーム</a></li>
+        <li><a href="service.html"         data-i18n="navService">サービス</a></li>
+        <li><a href="facility.html"        data-i18n="navFacility">施設を探す</a></li>
+        <li><a href="contact.html#recruit" data-i18n="navRecruit">採用情報</a></li>
+        <li><a href="contact.html"         data-i18n="navContact">お問い合わせ</a></li>
+      </ul>
+      <div class="mobile-contact-block">
+        <span class="mobile-tel-label" data-i18n="telLabel">お電話でのご相談</span>
+        <a href="tel:0120000000" class="mobile-tel-link">📞 0120-000-000</a>
+        <a href="contact.html" class="mobile-contact-btn" data-i18n="btnContact">お問い合わせフォームへ →</a>
+        <button class="lang-toggle-btn" onclick="toggleLang()" style="margin-top:8px;width:100%;border-radius:10px;height:42px;font-size:13px;">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="page-hero-en" data-i18n="facPageEn">FIND A FACILITY</span>
+  <h1 class="page-hero-title" data-i18n="facPageTitle">施設を探す</h1>
+  <div class="breadcrumb">
+    <a href="index.html" data-i18n="navHome">ホーム</a>
+    <span class="breadcrumb-sep">›</span>
+    <span data-i18n="facBread">施設を探す</span>
+  </div>
+</div>
+
+<main>
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-en" data-i18n="facSearchEn">SEARCH</span>
+        <h2 class="section-title" data-i18n="facSearchTitle">エリア・サービスから施設を絞り込む</h2>
+        <p class="section-desc" data-i18n="facSearchDesc">ご希望の地域やサービス種別を選択して、最適な施設をお探しください。</p>
+      </div>
+
+      <div class="filter-bar">
+        <div class="filter-group">
+          <label for="regionSelect" class="filter-label" data-i18n="facRegionLabel">エリアで絞り込む</label>
+          <select id="regionSelect" class="filter-select">
+            <option value="all"      data-i18n="facRegAll">すべての地域</option>
+            <option value="tokyo"    data-i18n="facRegTokyo">東京都</option>
+            <option value="osaka"    data-i18n="facRegOsaka">大阪府</option>
+            <option value="shizuoka" data-i18n="facRegShizuoka">静岡県</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="serviceSelect" class="filter-label" data-i18n="facSvcLabel">サービスで絞り込む</label>
+          <select id="serviceSelect" class="filter-select">
+            <option value="all"  data-i18n="facSvcAll">すべてのサービス</option>
+            <option value="home" data-i18n="facSvcHome">有料老人ホーム</option>
+            <option value="day"  data-i18n="facSvcDay">デイサービス</option>
+            <option value="care" data-i18n="facSvcCare">訪問介護</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="facility-grid">
+        <div class="facility-card fade-up delay-1" data-region="tokyo" data-service="home">
+          <div class="facility-card-thumb">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&auto=format&fit=crop" alt="ひかり苑 東京新宿" loading="lazy" />
+          </div>
+          <div class="facility-card-body">
+            <span class="facility-badge badge-home" data-i18n="facSvcHome">有料老人ホーム</span>
+            <h3 class="facility-name">ひかり苑 東京新宿</h3>
+            <p class="facility-location">📍 東京都新宿区西新宿1-1-1</p>
+            <a href="contact.html" class="facility-link" data-i18n="facLink">詳細・見学を申込む ›</a>
+          </div>
+        </div>
+
+        <div class="facility-card fade-up delay-2" data-region="tokyo" data-service="day">
+          <div class="facility-card-thumb">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&auto=format&fit=crop" alt="ひかり苑 東京渋谷" loading="lazy" />
+          </div>
+          <div class="facility-card-body">
+            <span class="facility-badge badge-day" data-i18n="facSvcDay">デイサービス</span>
+            <h3 class="facility-name">ひかり苑 東京渋谷</h3>
+            <p class="facility-location">📍 東京都渋谷区道玄坂2-2-2</p>
+            <a href="contact.html" class="facility-link" data-i18n="facLink">詳細・見学を申込む ›</a>
+          </div>
+        </div>
+
+        <div class="facility-card fade-up delay-3" data-region="osaka" data-service="home">
+          <div class="facility-card-thumb">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop" alt="ひかり苑 大阪梅田" loading="lazy" />
+          </div>
+          <div class="facility-card-body">
+            <span class="facility-badge badge-home" data-i18n="facSvcHome">有料老人ホーム</span>
+            <h3 class="facility-name">ひかり苑 大阪梅田</h3>
+            <p class="facility-location">📍 大阪府大阪市北区梅田3-3-3</p>
+            <a href="contact.html" class="facility-link" data-i18n="facLink">詳細・見学を申込む ›</a>
+          </div>
+        </div>
+
+        <div class="facility-card fade-up delay-1" data-region="osaka" data-service="care">
+          <div class="facility-card-thumb" style="display:flex;align-items:center;justify-content:center;font-size:52px;background:var(--green-50);">🏠</div>
+          <div class="facility-card-body">
+            <span class="facility-badge badge-care" data-i18n="facSvcCare">訪問介護</span>
+            <h3 class="facility-name">ひかり苑 大阪南</h3>
+            <p class="facility-location">📍 大阪府大阪市浪速区難波4-4-4</p>
+            <a href="contact.html" class="facility-link" data-i18n="facLink">詳細・見学を申込む ›</a>
+          </div>
+        </div>
+
+        <div class="facility-card fade-up delay-2" data-region="shizuoka" data-service="day">
+          <div class="facility-card-thumb" style="display:flex;align-items:center;justify-content:center;font-size:52px;background:var(--green-50);">🌿</div>
+          <div class="facility-card-body">
+            <span class="facility-badge badge-day" data-i18n="facSvcDay">デイサービス</span>
+            <h3 class="facility-name">ひかり苑 静岡</h3>
+            <p class="facility-location">📍 静岡県静岡市葵区紺屋町5-5-5</p>
+            <a href="contact.html" class="facility-link" data-i18n="facLink">詳細・見学を申込む ›</a>
+          </div>
+        </div>
+
+        <div class="facility-card fade-up delay-3" data-region="shizuoka" data-service="home">
+          <div class="facility-card-thumb" style="display:flex;align-items:center;justify-content:center;font-size:52px;background:var(--green-50);">🌸</div>
+          <div class="facility-card-body">
+            <span class="facility-badge badge-home" data-i18n="facSvcHome">有料老人ホーム</span>
+            <h3 class="facility-name">ひかり苑 浜松</h3>
+            <p class="facility-location">📍 静岡県浜松市中区元城町6-6-6</p>
+            <a href="contact.html" class="facility-link" data-i18n="facLink">詳細・見学を申込む ›</a>
+          </div>
+        </div>
+
+        <p id="facilityEmpty" data-i18n="facEmpty">条件に合う施設が見つかりませんでした。条件を変えてお試しください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="section-head center">
+        <span class="section-en" data-i18n="facCtaEn">CONTACT</span>
+        <h2 class="section-title" data-i18n="facCtaTitle">施設についてお気軽にご相談ください</h2>
+        <p class="section-desc" data-i18n="facCtaDesc">見学・体験入居はいつでも受付中。電話でのご相談もお気軽にどうぞ。</p>
+      </div>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-white"   data-i18n="facCtaBtn1">お問い合わせ</a>
+        <a href="tel:0120000000" class="btn btn-outline" data-i18n="facCtaBtn2" style="color:rgba(255,255,255,0.85);border-color:rgba(255,255,255,0.4);">📞 0120-000-000</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="site-logo footer-logo">
+          <img src="logo/logo-full-white.svg" alt="ひかり苑 HIKARI CARE" style="height:38px;width:auto;display:block;" />
+        </div>
+        <p class="footer-desc" data-i18n="footDesc">心のこもった介護で、ご入居者様・ご利用者様の毎日に笑顔と安心をお届けします。</p>
+      </div>
+      <div>
+        <p class="footer-col-title" data-i18n="footMenuTitle">メニュー</p>
+        <ul class="footer-links">
+          <li><a href="index.html"           data-i18n="footMenu1">ホーム</a></li>
+          <li><a href="service.html"         data-i18n="footMenu2">サービス紹介</a></li>
+          <li><a href="facility.html"        data-i18n="footMenu3">施設を探す</a></li>
+          <li><a href="contact.html#recruit" data-i18n="footMenu4">採用情報</a></li>
+          <li><a href="contact.html"         data-i18n="footMenu5">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title" data-i18n="footCtaTitle">ご相談・お問い合わせ</p>
+        <a href="tel:0120000000" class="footer-tel-big">0120-000-000</a>
+        <p class="footer-hours" data-i18n-html="footHours">受付時間 9:00〜17:00（月〜土）<br>日祝・年末年始を除く</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy" data-i18n="footCopy">© 2026 HIKARI CARE — Built by Sutanology</p>
+      <div class="footer-policy">
+        <a href="#" data-i18n="footPrivacy">プライバシーポリシー</a>
+        <a href="#" data-i18n="footTerms">利用規約</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/lang.js"></script>
+<script src="js/main.js"></script>
+<script src="js/filter.js"></script>
+</body>
+</html>
